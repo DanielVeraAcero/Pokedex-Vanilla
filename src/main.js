@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch'; //! Esto se descomenta en caso de correrlo desde node
 
 const pokemonContainer = document.querySelector('.pokemon-container');
 
@@ -7,6 +7,7 @@ const pokeAPI = 'https://pokeapi.co/api/v2/pokemon'
 async function fetchPokemon(id) {
     let response = await fetch(`${pokeAPI}/${id}`);
     let data = await response.json();
+    console.log(data);
     createPokemon(data);
 }
 
@@ -24,7 +25,7 @@ function createPokemon(pokemon) {
     spriteContainer.classList.add('img-container');
 
     const sprite = document.createElement('img');
-    sprite.src = pokemon.sprite.front_default;
+    sprite.src = pokemon.sprites.front_default;
 
     spriteContainer.appendChild(sprite);
     
@@ -41,3 +42,5 @@ function createPokemon(pokemon) {
 
     pokemonContainer.appendChild(card)
 }
+
+fetchManyPokemon(9);
