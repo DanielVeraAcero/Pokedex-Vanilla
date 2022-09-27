@@ -9,3 +9,44 @@ html{
     font-family: 'Oswald', sans-serif;
     font-size: 6.25%;
 }
+body {
+    background: rgb(85, 144, 189);
+    background: linear-gradient(
+      90deg,
+      rgba(85, 144, 189, 1) 0%,
+      rgba(108, 183, 240, 1) 54%,
+      rgba(182, 216, 242, 1) 82%
+    );
+    text-align: center;
+}
+h1{
+    color: white;
+    font-size: 16rem;
+}
+.pokemon-container{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30rem;
+}
+.pokemon-block{
+    background-color: white;
+    border-radius: 10rem;
+    padding: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+.img-container{
+    background-image: url("./blob.svg");
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+.pokemon-block p{
+    font-size: 16rem;
+    margin: 5px;
+}
+.pokemon-block .name{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20rem;
+}
